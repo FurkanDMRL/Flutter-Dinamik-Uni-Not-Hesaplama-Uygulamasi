@@ -1,2 +1,2 @@
-# Dinamik Üniversite Not Hesaplama Uygulaması 
+#Flutter Dinamik Üniversite Not Hesaplama Uygulaması 
 Projenin lib ve pubspec dosyaları mevcuttur. 
