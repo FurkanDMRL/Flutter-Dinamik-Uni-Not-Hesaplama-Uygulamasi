@@ -1,2 +1,2 @@
-# Dinamik-niversite-Not-Hesaplama-Uygulamas-
+# Dinamik Üniversite Not Hesaplama Uygulaması 
 Dinamik Üniversite Not Hesaplama Uygulaması
