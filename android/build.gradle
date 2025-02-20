@@ -1,0 +1,32 @@
+// Ana proje build.gradle dosyası
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+
+// Kotlin sürümünü güncelle
+buildscript {
+    ext.kotlin_version = '1.9.0'  // Kotlin sürümünü 1.9.0 olarak ayarla
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.0.0"  // Android Gradle Plugin sürümü
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Kotlin Gradle plugin
+    }
+}
+
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(":app")
+}
+
+// Temizlik task'ı
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
